@@ -1,19 +1,24 @@
+#include <iostream>
 #include "app.h"
+#include "dice.h"
 #include "imgui.h"
 #include "config.h"
 
 void App::render()
 {
   renderDockSpace();
-  renderUIElements();
+  renderDice();
   renderAppInformation();
   ImGui::ShowDemoWindow();
 }
 
-void App::renderUIElements()
+void App::renderDice()
 {
   ImGui::Begin("Hello, world!");
-  ImGui::Button("Hi");
+  if (ImGui::Button("Hi")) {
+    Dice dice;
+    dice.roll(Dice::D20, 2);
+  }
   ImGui::End();
 }
 
@@ -22,6 +27,8 @@ void App::renderAppInformation()
   ImGui::Begin("App Information");
   ImGui::Text(APP_NAME);
   ImGui::Text(APP_VERSION);
+  ImGui::Text(APP_AUTHOR);
+
   ImGui::End();
 }
 

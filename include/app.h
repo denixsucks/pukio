@@ -7,6 +7,6 @@ public:
 
 private:
   void renderAppInformation();
-  void renderUIElements();
+  void renderDice();
   void renderDockSpace();
 };

@@ -17,6 +17,7 @@ target_include_directories(${EXE_NAME} PUBLIC
     ${Vulkan_INCLUDE_DIR}
     ${GLFW_INCLUDE_DIR}
     ${IMGUI_INCLUDE_DIR}
+    include
 )
 
 target_link_libraries(${EXE_NAME}
