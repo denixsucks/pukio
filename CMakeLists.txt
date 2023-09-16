@@ -3,6 +3,7 @@ project(pukio)
 
 set(CMAKE_CXX_STANDARD 17)
 
+include_directories(include)
 include(cmake/external.cmake)
 include(cmake/config.cmake)
 
